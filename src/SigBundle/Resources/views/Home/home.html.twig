@@ -1,0 +1,42 @@
+{% extends '@SigBundle/Resources/views/base.html.twig' %}
+
+{% block content %}
+    <main class="section">
+        <div class="container">
+
+            <div class="columns">
+                <div class="column">
+                    <p class="title is-4">
+                        Log in / Register
+                    </p>
+                    <p class="subtitle">
+                        To begin with, please authenticate below and start using the app!
+                    </p>
+                    <form action="{{ path('sig_authenticate') }}" class="form columns" method="post">
+                        <div class="column">
+                            <p class="control has-icon">
+                                <input class="input" type="email" placeholder="Email" name="email">
+                                <i class="fa fa-envelope"></i>
+                            </p>
+                            <p class="control has-icon">
+                                <input class="input" type="password" placeholder="Password" name="password">
+                                <i class="fa fa-lock"></i>
+                            </p>
+                        </div>
+                        <div class="column">
+                            <p class="control">
+                                <input type="submit" value="Connect" class="button is-success">
+                            </p>
+                            <p class="control">
+                                <a href="#" class="button is-dark is-outlined">
+                                    Lost credentials?
+                                </a>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </main>
+{% endblock %}

@@ -1,0 +1,7 @@
+sig_homepage:
+    path:     /
+    defaults: { _controller: SigBundle:Siniu:index }
+
+sig_authenticate:
+    path:   /authenticate
+    defaults: { _controller: SigBundle:Siniu:connect }

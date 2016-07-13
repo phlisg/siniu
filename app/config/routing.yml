@@ -1,0 +1,3 @@
+sig:
+    resource: "@SigBundle/Resources/config/routing.yml"
+    prefix:   /

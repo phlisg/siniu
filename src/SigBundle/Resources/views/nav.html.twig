@@ -1,0 +1,46 @@
+<section class="hero is-primary is-medium is-bold">
+    <!-- Hero header: will stick at the top -->
+    <div class="hero-head">
+        <header class="nav">
+            <div class="container">
+                <div class="nav-left">
+                    <a class="nav-item" href="{{ path('sig_homepage') }}">
+                        Síníu
+                    </a>
+                </div>
+        <span class="nav-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+                <div class="nav-right nav-menu">
+                    <a class="nav-item is-active">
+                        Home
+                    </a>
+                    <a class="nav-item">
+                        Examples
+                    </a>
+                    <a class="nav-item">
+                        Documentation
+                    </a>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <!-- Hero content: will be in the middle -->
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            {% if nav.title is defined %}
+                <h1 class="title is-1">
+                    {{ nav.title }}
+                </h1>
+            {% endif %}
+            {% if nav.subtitle is defined %}
+                <h2 class="subtitle">
+                    {{ nav.subtitle }}
+                </h2>
+            {% endif %}
+        </div>
+    </div>
+</section>
