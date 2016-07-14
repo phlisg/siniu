@@ -6,9 +6,15 @@
         <header class="nav">
             <div class="container">
                 <div class="nav-left">
-                    <a class="nav-item" href="{{ path('sig_homepage') }}">
-                        Síníu
-                    </a>
+                    {% if nav.active_path is not defined %}
+                        <a class="nav-item is-active" href="{{ path('sig_homepage') }}">
+                            Síníu
+                        </a>
+                    {% else %}
+                        <a class="nav-item" href="{{ path('sig_homepage') }}">
+                            Síníu
+                        </a>
+                    {% endif %}
                 </div>
                 <span class="nav-toggle">
           <span></span>
@@ -16,7 +22,11 @@
           <span></span>
         </span>
                 <div class="nav-right nav-menu">
-                    {{ menu.navConfig(nav.active_path) }}
+                    {% if nav.active_path is not defined %}
+                        {{ menu.navConfig() }}
+                    {% else %}
+                        {{ menu.navConfig(nav.active_path) }}
+                    {% endif %}
                 </div>
             </div>
         </header>
