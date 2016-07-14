@@ -1,4 +1,6 @@
-<section class="hero is-primary is-medium is-bold">
+{% import 'SigBundle:Macros:nav.config.twig' as menu %}
+
+<section class="hero is-dark is-medium is-bold">
     <!-- Hero header: will stick at the top -->
     <div class="hero-head">
         <header class="nav">
@@ -8,21 +10,13 @@
                         Síníu
                     </a>
                 </div>
-        <span class="nav-toggle">
+                <span class="nav-toggle">
           <span></span>
           <span></span>
           <span></span>
         </span>
                 <div class="nav-right nav-menu">
-                    <a class="nav-item is-active">
-                        Home
-                    </a>
-                    <a class="nav-item">
-                        Examples
-                    </a>
-                    <a class="nav-item">
-                        Documentation
-                    </a>
+                    {{ menu.navConfig(nav.active_path) }}
                 </div>
             </div>
         </header>

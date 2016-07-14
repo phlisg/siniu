@@ -1,0 +1,31 @@
+{% macro navConfig(active_path) %}
+    {% set navs = {
+    0 : { name : 'sig_authenticate', path : '/authenticate', title : 'Log in'},
+    1 : { name : 'sig_create_signature', path : '/create', title : 'Create'}
+
+    } %}
+
+    {% if active_path is defined %}
+
+        {% for nav in navs %}
+            {% if nav.path == active_path %}
+                <a class="nav-item is-active" href="{{ path(nav.name) }}">
+                    {{ nav.title }}
+                </a>
+            {% else %}
+                <a class="nav-item" href="{{ path(nav.name) }}">
+                    {{ nav.title }}
+                </a>
+            {% endif %}
+        {% endfor %}
+
+    {% else %}
+
+        {% for nav in navs %}
+            <a class="nav-item" href="{{ path(nav.name) }}">
+                {{ nav.title }}
+            </a>
+        {% endfor %}
+
+    {% endif %}
+{% endmacro %}

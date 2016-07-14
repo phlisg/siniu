@@ -5,3 +5,11 @@ sig_homepage:
 sig_authenticate:
     path:   /authenticate
     defaults: { _controller: SigBundle:Siniu:connect }
+
+sig_generator:
+    path:   /generator
+    defaults: { _controller: SigBundle:Generator:make }
+
+sig_create_signature:
+    path:   /create
+    defaults: { _controller: SigBundle:Form:index }

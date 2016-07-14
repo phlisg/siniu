@@ -26,6 +26,18 @@ class SiniuController extends Controller
 
     public function connectAction(Request $request)
     {
-        return new Response("$email $password");
+        $title = 'Log in';
+        $path = '/authenticate';
+
+        return $this->render('SigBundle:Form:form.html.twig', [
+            'page' => [
+                'title' => $title,
+            ],
+            'nav'  => [
+                'active_path'   => $path,
+                'title'    => $title,
+                'subtitle' => 'Fill up this form to get the fun started!'
+            ]
+        ]);
     }
 }
