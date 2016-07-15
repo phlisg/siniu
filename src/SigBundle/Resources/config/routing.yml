@@ -3,8 +3,13 @@ sig_homepage:
     defaults: { _controller: SigBundle:Siniu:index }
 
 sig_authenticate:
-    path:   /authenticate
+    path:   /login
+    defaults: { _controller: SigBundle:Siniu:login }
+
+sig_connect:
+    path: /authenticate
     defaults: { _controller: SigBundle:Siniu:connect }
+    methods: [POST]
 
 sig_generator:
     path:   /generator

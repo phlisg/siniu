@@ -1,0 +1,19 @@
+SigBundle\Entity\Users:
+    type: entity
+    table: null
+    repositoryClass: SigBundle\Repository\UsersRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        username:
+            type: string
+            length: '50'
+            unique: true
+        password:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

@@ -2,7 +2,7 @@
 parameters:
     database_host: 127.0.0.1
     database_port: null
-    database_name: symfony
+    database_name: siniu
     database_user: dbuser
     database_password: 123
     mailer_transport: smtp

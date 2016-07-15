@@ -1,5 +1,34 @@
 {% extends '@SigBundle/Resources/views/base.html.twig' %}
 
 {% block content %}
-Hello!
+    <main class="section">
+        {% if flash is defined %}
+            {{ flash.message }}
+            {% for bug in flash.debug %}
+                <p class="button is-danger">{{ bug }}</p>
+            {% endfor %}
+            {{ dump(flash.debug) }}
+
+        {% endif %}
+        <section class="container">
+            <h2 class="title is-3">If user is standard</h2>
+            <p>
+            <ol>
+                <li>Choose template (if given choice).</li>
+                <li>Configure signature from team model</li>
+                <li>View, create new, download.</li>
+            </ol>
+            </p>
+            <h2 class="title is-3">If user has privileges</h2>
+            <p>
+            <ol>
+                <li>Choose template.</li>
+                <li>Configure base signature for team.</li>
+                <li>View, create new, download.</li>
+            </ol>
+            </p>
+        </section>
+    </main>
+
+
 {% endblock %}

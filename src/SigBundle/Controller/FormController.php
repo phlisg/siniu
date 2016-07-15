@@ -3,7 +3,6 @@
 namespace SigBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\HttpFoundation\Response;
 
 class FormController extends Controller
 {
